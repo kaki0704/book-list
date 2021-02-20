@@ -39,6 +39,6 @@ func main() {
 	router.HandleFunc("/books", controller.UpdateBook(db)).Methods("PUT")
 	router.HandleFunc("/books/{id}", controller.RemoveBook(db)).Methods("DELETE")
 
-	fmt.Println("Server is running at port 8000")
-	log.Fatal(http.ListenAndServe(":8000", router))
+	fmt.Println("Server is running at port 8080")
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
